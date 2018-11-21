@@ -1,6 +1,6 @@
 package com.ticder.persistence;
 
-import com.ticder.exception.NotFoundException;
+import com.ticder.exceptions.NotFoundException;
 import com.ticder.model.Student;
 
 import java.util.*;

@@ -1,9 +1,9 @@
 package com.ticder;
 
-import com.ticder.controller.ClassRoomController;
-import com.ticder.controller.StudentController;
-import com.ticder.exception.NameRequiredException;
-import com.ticder.exception.NotFoundException;
+import com.ticder.controllers.ClassRoomController;
+import com.ticder.controllers.StudentController;
+import com.ticder.exceptions.NameRequiredException;
+import com.ticder.exceptions.NotFoundException;
 import com.ticder.model.Group;
 import org.springframework.web.bind.annotation.*;
 import java.util.List;

@@ -1,7 +1,7 @@
-package com.ticder.controller;
+package com.ticder.controllers;
 
-import com.ticder.exception.NameRequiredException;
-import com.ticder.exception.NotFoundException;
+import com.ticder.exceptions.NameRequiredException;
+import com.ticder.exceptions.NotFoundException;
 import com.ticder.model.Student;
 import com.ticder.persistence.StudentRepository;
 

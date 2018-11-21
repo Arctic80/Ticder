@@ -1,6 +1,6 @@
 package com.ticder.model;
 
-import com.ticder.exception.NameRequiredException;
+import com.ticder.exceptions.NameRequiredException;
 
 public class Student
 {

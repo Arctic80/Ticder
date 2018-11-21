@@ -1,6 +1,6 @@
-package com.ticder.controller;
+package com.ticder.controllers;
 
-import com.ticder.exception.NotFoundException;
+import com.ticder.exceptions.NotFoundException;
 import com.ticder.model.Group;
 import com.ticder.model.Pair;
 import com.ticder.model.Student;
