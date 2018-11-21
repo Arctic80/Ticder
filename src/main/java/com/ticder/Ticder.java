@@ -5,10 +5,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 
 @SpringBootApplication
-public class Ticder
-{
-    public static void main(String[] args)
-    {
+public class Ticder {
+    public static void main(String[] args) {
         SpringApplication.run(Ticder.class, args);
     }
 }

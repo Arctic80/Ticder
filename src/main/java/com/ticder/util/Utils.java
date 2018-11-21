@@ -1,4 +1,4 @@
-package com.ticder;
+package com.ticder.util;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;

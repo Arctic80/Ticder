@@ -1,6 +1,12 @@
 package com.ticder;
 
+import com.ticder.controller.ClassRoomController;
+import com.ticder.controller.StudentController;
+import com.ticder.exception.NameRequiredException;
+import com.ticder.exception.NotFoundException;
+import com.ticder.model.Group;
 import org.springframework.web.bind.annotation.*;
+import java.util.List;
 
 
 @RestController
@@ -9,25 +15,18 @@ public class TicderController
     StudentController studentController = new StudentController();
     ClassRoomController classRoomController = new ClassRoomController();
 
-    @RequestMapping(value = "/afegirAlumne", method = RequestMethod.POST)
-    public String createPlayer(@RequestParam("name") String name) throws NameRequiredException, NameAlreadyExistsException
-    {
-        return "Student: " + studentController.createStudent(name) + " created.";
+    @PostMapping("/afegirAlumne")
+    public void createPlayer(@RequestParam String name) throws NameRequiredException {
+        studentController.createStudent(name);
     }
 
-    @RequestMapping(value = "/esborrarAlumne", method = RequestMethod.DELETE)
-    public String deleteStudent(@RequestParam("id") Integer id) throws NotFoundException
-    {
+    @DeleteMapping("/esborrarAlumne")
+    public void deleteStudent(@RequestParam int id) throws NotFoundException {
         studentController.deleteStudent(id);
-
-        return "Student with id: " + id + " has been deleted.";
     }
 
-    @RequestMapping(value = "/aparellar", method = RequestMethod.GET)
-    public String pair()
-    {
-        classRoomController.pair();
-
-        return "";
+    @GetMapping("/aparellar")
+    public List<Group> pair() throws NotFoundException{
+        return classRoomController.pair();
     }
 }
